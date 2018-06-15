@@ -8,5 +8,5 @@ class SecondClass(FirstClass):
 		self.hello(message)
 
 	def roll_dice(self):
-		print('Method roll_dice is called from SecondClass')
+		print 'Method roll_dice is called from SecondClass'
 		return str(randint(1,6))

@@ -1,4 +1,3 @@
-class FirstClass(object):
+class FirstClass():
 	def __init__(self):
-		print 'Hello',			#python 2
-		#print('Hello ', end='')	#python 3
+		print('Hello ', end='')

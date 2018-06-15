@@ -1,3 +1,3 @@
-class FirstClass(object):
+class FirstClass():
 	def __init__(self):
-		print 'Hello World'
+		print('Hello World')

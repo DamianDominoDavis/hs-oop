@@ -3,7 +3,7 @@ from random import *
 
 class SecondClass(FirstClass):
 	def __init__(self, name='cbrill'):
-		super(SecondClass, self).__init__()
+		super().__init__()
 		message = 'Hello cbrill, your number is ' + self.roll_dice()
 		self.hello(message)
 
