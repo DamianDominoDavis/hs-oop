@@ -3,8 +3,10 @@ from random import *
 
 class SecondClass(FirstClass):
 	def __init__(self, name='cbrill'):
-		name = name + ', your number is ' + str(self.roll_dice())
-		super().__init__(name)
+		super(SecondClass, self).__init__()
+		message = 'Hello cbrill, your number is ' + self.roll_dice()
+		self.hello(message)
+
 	def roll_dice(self):
 		print('Method roll_dice is called from SecondClass')
-		return randint(1,6)
+		return str(randint(1,6))
