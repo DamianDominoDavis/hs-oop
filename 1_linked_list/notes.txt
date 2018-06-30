@@ -1,0 +1,13 @@
+Given code comes in a fancy black text box within the PDF. They select and copy ridiculously poorly. Simple is fine.
+
+We could easily standardize the Node class given across LList, Queue, and Stack; we could just as easily have them derive LLNodes etc for extra subclass practice, and give them the superclass instead. As is, they're just making extra files, for what.
+
+Are we doing properties or not here? I don't see any justification for opting for them over plain instance variables, and we aren't teaching the difference or telling the kids to make their own fields into properties when appropriate.
+
+We don't list the names (potentially signatures) of all the class functions in one place during the introduction to the class. I strongly believe this helps in the beginning, and recommend here.
+
+Most of the SinglyList methods give signatures that take list_head and don't include self. The impression this gives mentally separates instances from their operations, and is not a good or even consistent one.
+
+ex00: There's a golden opportunity to teach them to implement their own __str__ methods, maybe as a bonus or a normal exercise.
+
+And while we're at it, this is data structures: why are we not teaching them to write __iter__ in the class, so they can use `for x in self` during the exercises? They'll even have to grok F/LIFO to write the iterators correctly. This is an all-around winning move.

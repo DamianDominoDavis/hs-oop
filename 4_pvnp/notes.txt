@@ -1,0 +1,13 @@
+Did we provide example game configurations? Did I get a biary? I admit I didn't look.
+
+Instances of super() without class and self, and other 2.x artifacts. Just, everywhere. It needs cleanup for 3.x.
+
+More of our delightfully could-have-been-benign text boxes for given code. And this is the more complex stuff they'll probably copy longhand incorrectly and waste time reviewing to "spot the bug" without teaching them anything.
+
+A unified Node class is very appealing here. In theory, all three structures are in play.
+
+ex05: it isn't super obvious that the board instance variable is a two-dimensional array of Queues, I had one kid asking me why the Queues had a length now if they didn't before. Rephrase.
+
+List comprehensions would have come in handy here. Too bad.
+
+Do we teach how to raise errors, trying to catch them, in intro? That would be useful during many of the board functions that take any old row and column.

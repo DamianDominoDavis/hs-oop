@@ -1,0 +1,9 @@
+Pdf:
+"If you are using python or another language approved by
+HackHighSchool make sure to research into python equivalent concepts
+on your own.  This project can be completed in any approve project
+language, however the tutorial and video guides will be in Ruby."
+
+Maybe we should fix that.
+
+ex03: "When the method is called[\n] pring out a sentance stating that it has been called"

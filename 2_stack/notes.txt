@@ -1,0 +1,13 @@
+I hope those aren't real phone numbers, kids love a bad joke and a worse idea.
+
+Again, we should standardize the Node classes across OOP exercises, especially if we're sticking to Queue and Stack in the same document / set of exercises.
+
+ex01: opportunity to teach the kids about "not reinventing the wheel" mindset by later mentioning functools, reduce, and accumulate. As is, they'll do loops; this is great practice for intro, but I want OOP kids to be practicing harder stuff. Like common library components, list comprehensions, generator functions, and anything else they're clearly advanced enough to understand but we've failed to mention even in the form of "also, google this for funsies."
+
+ex01: typos, the example output relies on integer division and won't be reproducible. Adjust example range to include 0 or example output mean to be 5.5
+
+ex04: typos, the steps described reverse the last k elements when it asks you to reverse the first k.
+
+ex05: typos, "ssequence"
+
+ex06: a dictionary would really come in handy. Do we teach that in intro? because we don't suggest it here.
