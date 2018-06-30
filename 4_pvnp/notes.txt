@@ -10,4 +10,4 @@ ex05: it isn't super obvious that the board instance variable is a two-dimension
 
 List comprehensions would have come in handy here. Too bad.
 
-Do we teach how to raise errors, trying to catch them, in intro? That would be useful during many of the board functions that take any old row and column.
+Do we teach how to raise errors, trying to catch them, in intro? That would be useful during many of the board functions that take any old row and column. Mentioning them as each function is given, and then pointing out the try statement in the given code, could be super instructional.
