@@ -9,6 +9,8 @@ class Node(object):
 	
 	@data.setter
 	def data(self, val):
+		if val is None:
+			raise ValueError("Node.data can't be None")
 		self._data = val
 
 	@property
