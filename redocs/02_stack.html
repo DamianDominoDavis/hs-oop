@@ -1,0 +1,124 @@
+<html>
+<head>
+    <style>
+    section.page {
+        border: 1px black solid;
+        padding: 5%;
+        margin: 5%;
+        width: 80%;
+        background-color: #DDA;
+    }
+    section.page pre {
+        display: inline;
+        background-color: #AAA;
+    }
+    section.page p.hint {
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+    <section class="page">
+        <h1>Chapter II</h1>
+        <h2>Attack of the <pre>git clone</pre>s</h2>
+        <p>The following 7 exercises are the member functions of the Stack class you will create over the chapter. Each exercise should be added to the same stack.py class file you will turn in. All exercises are here written in Python, but if you'd like to implement them in some other language, knock yourself out.</p>
+        <p>The complete Node class has been provided for you. Use it and the descriptions in the following exercises to create the Stack class.</p>
+    </section>
+    
+    <section class="page">
+        <h1>class Node</h1>
+        <p>Elements of a Stack are instances of the Node class with two instance variables:</p>
+        <ul>
+            <li><span><strong>data</strong> — the value an element contains and represents, never <pre>None</pre></span></li>
+            <li><span><strong>next</strong> — a reference pointing to the next Node element downwards in a Stack, or <pre>None</pre></span></li>
+        </ul>
+        <p>Import your Node class into your Stack class to use Nodes and their instance vairiables to build the functionality of the Stack class.</p>
+    </section>
+
+    <section class="page">
+        <h1>class Stack</h1>
+        <p>Stacks are iterable collections of Nodes linked in at least one direction from top to bottom. Stacks operate on a last-in-first-out basis (<a href="http://bfy.tw/2gGa">LIFO</a>), just like real stacks of plates, pancakes, hay bales, whatever you're piling up around your house. They are useful as collections that need to be frequently added to and removed from at one end, like your own short-term memory. Stacks have at least one instance variable:</p>
+        <ul>
+            <li><span><strong>top</strong> — the Node at the top of the Stack, or <pre>None</pre></span></li>
+        </ul>
+        <p>Each instance of Stack handles the manipulation of its own elements. Methods of the Stack class should include:</p>
+        <ul>
+            <li>
+                <span>
+                    <strong>is_empty(self)</strong> — returns <pre>True</pre> if this list has no elements, else returns <pre>False</pre>
+                </span>
+            </li>
+            <li>
+                <span><strong>push(self, value)</strong> — creates a Node of value, and pushes it down on top of the Stack</span>
+            </li>
+            <li>
+                <span><strong>pop(self)</strong> — returns <pre>None</pre> if this Stack is empty, else unlinks the top Node and returns its data value</span>
+            </li>
+            <li>
+                <span><strong>peek(self)</strong> — returns <pre>None</pre> if this Stack is empty, else returns the data value of top without altering the Stack</span>
+            </li>
+            <li>
+                <span>
+                    <strong>__iter__(self)</strong> — the iterator for this Stack</span>
+            </li>
+            <li>
+                <span><strong>__str__(self)</strong> — the string representation of this Stack</span>
+            </li>
+            <li>
+                <span><strong>size(self)</strong> — returns the integer number of elements in this Stack</span>
+            </li>
+        </ul>
+        <p class="hint">Remember @properties? The data value in top would be a good candidate, if we weren't already going to implement peek.</p>
+    </section>
+    <section class="page">
+        <h1>ex00</h1>
+        <h1>def is_empty(self</a>):</h1>
+        <span><strong>is_empty(self)</strong> returns <pre>True</pre> if this Stack has no elements, else returns <pre>False</pre>.</span>
+    </section>
+    <section class="page">
+        <h1>ex01</h1>
+        <h1>def push(self, value):</h1>
+        <span><strong>push(self, value)</strong> creates a Node of value, and pushes it down on top of the Stack.</span>
+        <p class="hint">top now reflects value. Very zen.</p>
+    </section>
+    <section class="page">
+        <h1>ex02</h1>
+        <h1>def pop(self):</h1>
+        <span><strong>pop(self)</strong> returns <pre>None</pre> if this Stack is empty, else unlinks the top Node and returns its data value.</span>
+    </section>
+    <section class="page">
+        <h1>ex03</h1>
+        <h1>def peek(self):</h1>
+        <span><strong>peek(self)</strong> returns <pre>None</pre> if this Stack is empty, else returns the data value of top without altering the Stack.</span>
+    </section>
+    <section class="page">
+        <h1>ex04</h1>
+        <h1>def __iter__(self):</h1>
+        <span><strong>__iter__(self)</strong> is the iterator for this Stack. The iterator for a Stack should behave by LIFO.</span>
+        <p class="hint">A Stack's iterator should yield elements in the same order they would be in if popped off the stack one by one, but without actually changing anything.</p>
+        <span>From now on, you may use keyword expressions like <pre>in self</pre>.</span>
+    </section>
+    <section class="page">
+        <h1>ex05</h1>
+        <h1>def __str__(self):</h1>
+        <span><strong>__str__(self)</strong> returns the string representation of this Stack. This should contain string representations of the data values of its elements.</span>
+        <p class="hint">If you're feeling ambitious, try to find the short and simple way to write this function in a single return statement.</p>
+    </section>
+    <section class="page">
+        <h1>ex06</h1>
+        <h1>def size(self):</h1>
+        <span><strong>size(self)</strong> returns the integer number of elements in this Stack.</span>
+    </section>
+    <section class="page">
+        <h1>challenge</h1>
+        <h1>balancing_act.py</h1>
+        <p>Using your Stack class, write a separate balancing_act.py file with a main function that asks the user to enter a string, then checks whether the input string has balanced parentheses.</p>
+        <ul>
+            <li>Valid strings will include any number or combination of characters, but checked for balanced <pre>()</pre>, <pre>[]</pre>, <pre>{}</pre>, and <pre><></pre> symbols. The empty string is also valid.</li>
+            <li>Order is important. <pre>This (string {is} [valid])</pre>, but <pre>{this (one) [isn't}]</pre>.</li>
+            <li>Balance means each symbol has its pair. <pre>[Valid] {strings} (pair)</pre>, but <pre>[invalid (ones {don't</pre>.</li>
+        </ul>
+        <p class="hint">This is a Stack exercise on purpose. Why would a stack be useful? What are you pushing and popping, but also when, and why?</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<html>
+<head>
+    <style>
+    section.page {
+        border: 1px black solid;
+        padding: 5%;
+        margin: 5%;
+        width: 80%;
+        background-color: #DDA;
+    }
+    section.page pre {
+        display: inline;
+        background-color: #AAA;
+    }
+    section.page p.hint {
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+    <section class="page">
+        <h1>Chapter III: Revenge of the List</h1>
+        <h2>Queues</h2>
+        <p>The following 6 exercises are the member functions of the Queue class you will create over the chapter. Each exercise should be added to the same queue.py class file you will turn in. All exercises are here written in Python, but if you'd like to implement them in some other language, knock yourself out.</p>
+        <p>The complete Node class has been provided for you. Use it and the descriptions in the following exercises to create the Queue class.</p>
+    </section>
+    
+    <section class="page">
+        <h1>class Node</h1>
+        <p>Elements of a Linked List are instances of the Node class with two instance variables:</p>
+        <ul>
+            <li><span><strong>data</strong> — the value an element contains and represents, never <pre>None</pre></span></li>
+            <li><span><strong>next</strong> — a reference pointing to the next Node element in a Queue, or <pre>None</pre></span></li>
+        </ul>
+        <p>Import your Node class into your Queue class to use Nodes and their instance vairiables to build the functionality of the Queue class.</p>
+    </section>
+
+    <section class="page">
+        <h1>class Queue</h1>
+        <p>Queues are iterable collections of Nodes linked in at least one direction from front to rear. Queues operate on a first-in-first-out basis (<a href="http://bfy.tw/1FGZ">FIFO</a>), just like a real queue of people waiting in line, and are useful as collections of things that need to be taken in straightforward order. Because they track front and rear, Queues are also relatively fast at adding and removing elements, but only at either end. Queues have two instance variables:</p>
+        <ul>
+            <li><span><strong>front</strong> — the Node at the front of the queue, or <pre>None</pre></span></li>
+            <li><span><strong>rear</strong> — the Node at the rear of the queue, or <pre>None</pre></span></li>
+        </ul>
+        <p>Each instance of Queue handles the manipulation of its own elements. Methods of the Queue class should include:</p>
+        <ul>
+            <li>
+                <span>
+                    <strong>is_empty(self)</strong> — returns <pre>True</pre> if this list has no elements, else returns <pre>False</pre>
+                </span>
+            </li>
+            <li>
+                <span><strong>enqueue(self, value)</strong> — creates a Node of value, and links it as the rear of the Queue</span>
+            </li>
+            <li>
+                <span><strong>dequeue(self)</strong> — returns <pre>None</pre> if this Queue is empty, else unlinks the front Node and returns its data value</span>
+            </li>
+            <li>
+                <span>
+                    <strong>__iter__(self)</strong> — the iterator for this Queue</span>
+            </li>
+            <li>
+                <span><strong>__str__(self)</strong> — the string representation of this Queue</span>
+            </li>
+            <li>
+                <span><strong>size(self)</strong> — returns the integer number of elements in this Queue</span>
+            </li>
+        </ul>
+        <p class="hint">It's pronounced "Q."</p>
+    </section>
+    <section class="page">
+        <h1>ex00</h1>
+        <h1>def is_empty(self</a>):</h1>
+        <span><strong>is_empty(self)</strong> returns <pre>True</pre> if this Queue has no elements, else returns <pre>False</pre>.</span>
+        <p class="hint">Remember me?</p>
+    </section>
+    <section class="page">
+        <h1>ex01</h1>
+        <h1>def enqueue(self, value):</h1>
+        <span><strong>enqueue(self, value)</strong> creates a Node of value, and links it as the rear of the Queue.</span>
+        <p class="hint">Queues should be aware of their fronts and rears at all times. Sound advice.</p>
+        <p class="hint">It's pronounced "N-Q."</p>
+    </section>
+    <section class="page">
+        <h1>ex02</h1>
+        <h1>def dequeue(self, value):</h1>
+        <span><strong>dequeue(self)</strong> returns <pre>None</pre> if this Queue is empty, else unlinks the front Node and returns its data value.</span>
+        <p class="hint">It's pronounced "D-Q."</p>
+    </section>
+    <section class="page">
+        <h1>ex03</h1>
+        <h1>def <a href="http://bfy.tw/Itta">__iter__(self)</a>:</h1>
+        <span><strong>__iter__(self)</strong> is the iterator for this Queue. The iterator for a Queue should behave by FIFO.</span>
+        <p class="hint">Most iterators are implemented to return elements according to some key feature of their data structure (e.g. by position, descendence, value), and to control the order yielded in a specific way. The iterator's behavior most closely resembles "what the collection is and does."</p>
+        <span>From now on, you may use keyword expressions like <pre>in self</pre>.</span>
+    </section>
+    <section class="page">
+        <h1>ex04</h1>
+        <h1>def __str__(self):</h1>
+        <span><strong>__str__(self)</strong> returns the string representation of this Queue. This should contain string representations of the data values of its elements.</span>
+        <p class="hint">If you're feeling ambitious, try to find the short and simple way to write this function in a single return statement.</p>
+    </section>
+    <section class="page">
+        <h1>ex05</h1>
+        <h1>def size(self):</h1>
+        <span><strong>size(self)</strong> returns the integer number of elements in this Queue.</span>
+        <p class="hint">Equal rights for size 0!</p>
+    </section>
+    <section class="page">
+        <h1>challenge</h1>
+        <h1>don't reinvent the wheel</h1>
+        <p>By now, you should have built LinkedList, Stack, and Queue from scratch. Congratulations, because that stuff is supposed to be hard! Still, now that you know how it works deep down, there's no reason for you to re-define these from scratch every time you need them. In the real world you'll often have access to pre-existing functions and structures in libraries. Capitalizing on existing code isn't always an option, or even a good idea, but you should know how to.</p>
+        <ul>
+            <li>Python has a built-in data structure called the <pre>deque</pre>, a double-ended queue. <a href="http://bfy.tw/IufN">Go read about it.</a></li>
+            <li>Make sure you understand what the differences are between a doubly linked list and our previous structures before moving on.</li>
+            <li>Create new LinkedList, Stack, and Queue classes as either subclasses or wrapper classes of deque, <strong>without using Node.</strong></li>
+            <li>Be sure to keep your new versions in a separate directory, or there will be trouble.</li>
+        </ul>
+        <p class="hint">It's pronounced "deck" like cards, "deke" like hockey, and "D-Q." Isn't that wild?</p>
+        <p class="hint">This is much easier than it sounds &mdash; all you have to do is match the methods of one class to another and use common sense. When you wrote LinkedList from scratch, you thought about where tail was in relation to head during add_tail. Here, all you need to notice is that LinkedList.add_tail and deque.append act in a very similar way. Make small adjustments where you need to, relying on the structure that already exists. Good luck!</p>
+    </section>
+</body>
+</html>
